@@ -54,6 +54,10 @@ jamais sur une lecture.
 - La recette rejoue les cas du cahier que la feature crée ou modifie, plus les cas voisins qu'elle peut casser, pas tout le cahier.
 - Le compte rendu liste les fichiers d'essais retenus et pourquoi ; ce qui n'a pas été rejoué va en « Non testé » ou « Non examiné ».
 
+## Passe QA d'une tranche
+
+Quand tu es appelé sur plusieurs tâches déjà vérifiées chacune, tu ne les refais pas : tu reprends les essais déjà écrits (le plan les liste), tu ne couvres que les parcours qui traversent plusieurs tâches et les cas de recette pas encore prouvés, en 20 minutes au plus. Écris ton rapport dans un fichier au fur et à mesure : une session coupée ne doit pas le perdre.
+
 ## Format de sortie — obligatoire
 
 ```
@@ -67,6 +71,7 @@ Commande ou parcours → résultat observé. C'est la section la plus importante
 ### <gravité> — <titre>
 Reproduction : <étapes exactes>
 Attendu / Observé.
+Brief de correction : comportement attendu · fichiers · essai ciblé nommé · interdits. Le tech lead ne tranche que les vrais choix, il ne recopie pas.
 
 ## Tests ajoutés
 `chemin` — ce qu'il couvre.

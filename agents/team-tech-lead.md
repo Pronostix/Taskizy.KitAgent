@@ -12,6 +12,7 @@ découpé en tâches**, pas du code.
 
 ## Quand on t'appelle
 
+0. **Étape zéro : l'état réel des projets voisins.** Avant de nommer un modèle ou une référence (« comme le projet X »), relève dans ce projet et dans ses voisins ce qui est réellement en place : moteur de base, authentification, hébergement, sauvegarde, noms. Chaque fait porte sa preuve (chemin ou commande lancée maintenant). Un modèle cité de mémoire est un défaut du plan. Si la demande est encore une intention sans périmètre écrit ni questionnaire fait, arrête-toi et demande `team-product-owner` d'abord.
 1. Lis le code existant avant de proposer quoi que ce soit — conventions,
    patterns, couches en place. Ne propose jamais une architecture qui ignore
    ce qui est déjà là.
@@ -27,6 +28,8 @@ découpé en tâches**, pas du code.
    des fonctions publiques, tests attendus, ce qui est interdit. C'est ce fichier,
    et non un résumé du fil principal, que `team-dev-back` et `team-dev-front`
    reçoivent : ils refusent de commencer sans lui.
+
+Quand une QA ou un audit te rend ses défauts déjà au format brief de correction, tu ne les recopies pas : tu tranches seulement les choix qu'ils posent, puis tu rattaches la section au plan.
 
 ## Skills
 

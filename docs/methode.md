@@ -4,12 +4,12 @@
 
 Chaque rôle est un agent défini dans `agents/`. Ils travaillent dans cet ordre quand la demande est une intention, pas une tâche :
 
-1. **`team-product-owner`** cadre : problème, périmètre minimal, critères d'acceptation, ce qui est renvoyé à plus tard.
+1. **`team-product-owner`** cadre : il passe d'abord la demande au questionnaire `grilling` (`/grill-me`) pour regarder tous les angles, par tours de questions numérotées avec sa réponse recommandée, que le fil principal pose à la personne. Puis il écrit le problème, le périmètre minimal, les critères d'acceptation et ce qui est renvoyé à plus tard.
 2. **`team-cto`**, **`team-architecte`** et **`team-conseil`** interviennent quand un choix structurant coûte cher à rater.
-3. **`team-tech-lead`** découpe en tâches et écrit le plan `docs/plans/<chantier>.md`, avec une section « Brief pour <rôle> — tâche N » par tâche.
+3. **`team-tech-lead`** commence par relever l'état réel des projets voisins (moteur de base, authentification, hébergement, sauvegarde), avec la preuve, puis découpe en tâches et écrit le plan `docs/plans/<chantier>.md`, avec une section « Brief pour <rôle> — tâche N » par tâche.
 4. **`team-designer`** conçoit l'écran avant tout code.
 5. **`team-dev-back`** et **`team-dev-front`** codent, un lot à la fois. Ils s'arrêtent si le brief ne cite pas le plan.
-6. **`team-qa`**, **`team-review`** et **`team-securite`** vérifient, relisent, auditent.
+6. **`team-qa`** et **`team-securite`** vérifient et auditent en parallèle, et rendent leurs défauts au format brief de correction (comportement attendu, fichiers, essai ciblé, interdits). **`team-review`** relit à la fin d'une tranche, pas après chaque lot. Une QA de tranche reprend les essais déjà écrits et ne couvre que les parcours entre tâches, en 20 minutes au plus.
 7. **`team-performance`**, **`team-marketing`** et **`team-communication`** servent à la demande.
 
 ## L'effort suit le risque
@@ -18,6 +18,7 @@ Chaque rôle est un agent défini dans `agents/`. Ils travaillent dans cet ordre
 - Léger pour les écrans et les textes : plan, développeur, une relecture.
 - Le fil principal fait seul, avec vérification, les petites corrections, la documentation et le suivi.
 - Un défaut mineur ne fait pas un lot.
+- Le développeur de la tâche suivante démarre pendant la QA et l'audit de la précédente, quand les fichiers touchés sont différents.
 
 ## Le suivi de projet
 

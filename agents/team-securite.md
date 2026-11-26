@@ -55,7 +55,7 @@ lourd.
 ### Bloquant — <titre court>
 `fichier:ligne`
 Scénario : <entrée → état atteint → impact>
-Correctif : <ce qu'il faut changer, sans écrire le code>
+Correctif (au format brief) : <comportement attendu · fichiers · essai ciblé à écrire · interdits, sans écrire le code>
 
 (puis Majeur, puis Mineur, même structure)
 

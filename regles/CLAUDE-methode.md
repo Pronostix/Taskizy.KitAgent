@@ -30,7 +30,7 @@ Les agents développeurs (`team-dev-back`, `team-dev-front`) ne se lancent jamai
 
 Raison : sans plan, un développeur part sur une interprétation de la demande que personne n'a relue.
 
-Séquence : `team-tech-lead` (plan, lots) → validation par vous si le plan pose des questions → `team-dev-*` sur un lot → QA → revue.
+Séquence : `team-product-owner` (cadrage, avec le questionnaire `grilling` / `/grill-me` sur tous les angles) → `team-tech-lead` (étape zéro : l'état réel des projets voisins ; plan, lots) → validation par vous si le plan pose des questions → `team-dev-*` sur un lot → QA et audit de sécurité en parallèle → corrections regroupées.
 
 ## L'effort d'équipe suit le risque (règle)
 
@@ -43,6 +43,14 @@ Le nombre de rôles lancés sur un lot dépend de ce que le code peut faire, pas
 | Petite correction, documentation, suivi | Fil principal, seul | vérification directe, pas de sous-agent |
 
 Un défaut mineur ne fait pas un lot : les mineurs sont regroupés avec les corrections du lot suivant ou traités par le fil principal. Les règles « pas de développeur sans plan du tech lead » et « tests ciblés » restent en vigueur à tous les niveaux. Un projet qui déclare un niveau plus strict dans son propre `CLAUDE.md` l'emporte.
+
+Règles de processus associées :
+
+- **Le product owner passe avant le tech lead.** Pour tout lot à risque ou toute feature encore à l'état d'intention, `team-product-owner` lance d'abord le questionnaire `grilling` (`/grill-me`) pour regarder tous les angles : produit, risques, exploitation, sécurité, usage au quotidien, ordre des étapes. Il rend au fil principal des tours de questions numérotées avec sa réponse recommandée ; le fil principal les pose, relance le product owner avec les réponses, jusqu'à ce qu'il n'en reste plus. Les décisions vont dans le journal des décisions du projet. Le plan ne s'écrit qu'après.
+- **Étape zéro du tech lead :** avant de citer un projet comme modèle, relever l'état réel des projets voisins (moteur de base, authentification, hébergement, sauvegarde, noms), avec la preuve. Un modèle cité de mémoire est un défaut du plan.
+- **QA et audit rendent leurs défauts au format brief de correction** (comportement attendu, fichiers, essai ciblé nommé, interdits) : le tech lead tranche seulement les vrais choix.
+- **Une QA de tranche est limitée :** elle reprend les essais déjà écrits, ne couvre que les parcours entre tâches et les cas pas encore prouvés, 20 minutes au plus, et écrit son rapport au fur et à mesure.
+- **Pipeline :** le développeur de la tâche suivante démarre pendant que la QA et l'audit de la précédente tournent, quand les fichiers touchés sont différents.
 
 Raison : les QA et audits trouvent de vrais défauts de sécurité dans le code qui publie ou valide, mais un cycle complet par défaut mineur coûte beaucoup de temps pour peu de gain.
 

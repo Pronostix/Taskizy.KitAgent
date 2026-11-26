@@ -15,7 +15,7 @@ Chaque agent de `agents/` a une table « Quand → skill ». Cette page en est l
 | `team-dev-front` | `browse`, `clean-code`, `dev-browser`, `emil-design-eng`, `fix-errors`, `image-to-code`, `refactor`, `ui-styling` |
 | `team-marketing` | `customer-research`, `landing-report`, `last30days`, `marketing`, `mom-test`, `obviously-awesome`, `offers`, `pricing`, `prospecting` |
 | `team-performance` | `benchmark`, `code-simplifier`, `debug-code`, `investigate` |
-| `team-product-owner` | `customer-research`, `last30days`, `mom-test`, `obviously-awesome`, `offers`, `office-hours`, `plan-ceo-review`, `pricing` |
+| `team-product-owner` | `customer-research`, `grill-me`, `grilling`, `last30days`, `mom-test`, `obviously-awesome`, `offers`, `office-hours`, `plan-ceo-review`, `pricing` |
 | `team-qa` | `benchmark`, `browse`, `canary`, `debug-code`, `dev-browser`, `investigate`, `qa`, `qa-only`, `verify` |
 | `team-review` | `clean-code`, `code-review`, `codex`, `devex-review`, `review`, `review-code`, `thermo-nuclear-code-quality-review` |
 | `team-securite` | `careful`, `cso`, `guard` |
@@ -57,7 +57,8 @@ Chaque agent de `agents/` a une table « Quand → skill ». Cette page en est l
 | `emil-design-eng` | externe | emilkowalski/skill | `team-designer`, `team-dev-front` |
 | `fix-errors` | kit | skills/fix-errors | `team-dev-back`, `team-dev-front` |
 | `fix-grammar` | kit | skills/fix-grammar | `team-communication` |
-| `grill-me` | externe | Melvynx/ai-maxxing-skills | `team-cto` |
+| `grill-me` | externe | Melvynx/ai-maxxing-skills | `team-cto`, `team-product-owner` |
+| `grilling` | externe | Melvynx/ai-maxxing-skills | `team-product-owner` |
 | `guard` | externe | garrytan/gstack | `team-securite` |
 | `high-end-visual-design` | externe | Leonxlnx/taste-skill | `team-designer` |
 | `image-to-code` | externe | Leonxlnx/taste-skill | `team-dev-front` |

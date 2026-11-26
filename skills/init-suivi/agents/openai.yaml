@@ -1,0 +1,5 @@
+interface:
+  display_name: "Init suivi"
+  short_description: "Set up the follow-up files in a repository"
+policy:
+  allow_implicit_invocation: false

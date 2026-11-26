@@ -1,0 +1,62 @@
+{
+  "_lisez-moi": "Skills appelés par les agents qui ne sont pas recopiés dans ce dépôt : leurs auteurs les publient et les tiennent à jour. L'installateur les récupère à la source. 'skills' = outil `npx skills add <source> -g -s <nom>`. 'gstack' = dépôt git avec son propre installateur (demande Bun).",
+  "sources": [
+    {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "mode": "skills",
+      "skills": ["ui-ux-pro-max", "banner-design", "brand", "design", "design-system", "slides", "ui-styling"]
+    },
+    {
+      "source": "Leonxlnx/taste-skill",
+      "mode": "skills",
+      "skills": ["brandkit", "design-taste-frontend", "high-end-visual-design", "redesign-existing-projects", "image-to-code", "imagegen-frontend-mobile", "imagegen-frontend-web", "industrial-brutalist-ui", "minimalist-ui"]
+    },
+    {
+      "source": "coreyhaines31/marketingskills",
+      "mode": "skills",
+      "skills": ["cold-email", "customer-research", "offers", "pricing", "prospecting"]
+    },
+    {
+      "source": "Melvynx/ai-maxxing-skills",
+      "mode": "skills",
+      "skills": ["dev-browser", "grill-me", "verify"]
+    },
+    {
+      "source": "emilkowalski/skill",
+      "mode": "skills",
+      "skills": ["emil-design-eng"]
+    },
+    {
+      "source": "mvanhorn/last30days-skill",
+      "mode": "skills",
+      "skills": ["last30days"]
+    },
+    {
+      "source": "kostja94/marketing-skills",
+      "mode": "skills",
+      "skills": ["linkedin-posts"]
+    },
+    {
+      "source": "wondelai/skills",
+      "mode": "skills",
+      "skills": ["mom-test", "obviously-awesome"]
+    },
+    {
+      "source": "czlonkowski/n8n-skills",
+      "mode": "skills",
+      "skills": ["n8n-node-configuration", "n8n-validation-expert"]
+    },
+    {
+      "source": "https://github.com/garrytan/gstack.git",
+      "mode": "gstack",
+      "cible": "skills/gstack",
+      "commande": "git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup",
+      "exigence": "Bun 1.0 ou plus ; Node.js sous Windows",
+      "skills": ["benchmark", "browse", "canary", "careful", "codex", "cso", "design-consultation", "design-review", "design-shotgun", "devex-review", "document-generate", "document-release", "guard", "investigate", "landing-report", "make-pdf", "office-hours", "plan-ceo-review", "plan-design-review", "plan-eng-review", "plan-tune", "qa", "qa-only", "review"]
+    }
+  ],
+  "outils-en-ligne-de-commande": [
+    {"nom": "ctx7", "commande": "npx ctx7@latest", "utilise-par": "team-dev-back, regles/context7.md", "note": "Documentation à jour d'une bibliothèque, lancée par npx, rien à installer."}
+  ],
+  "integres-a-claude-code": ["code-review", "code-simplifier"]
+}

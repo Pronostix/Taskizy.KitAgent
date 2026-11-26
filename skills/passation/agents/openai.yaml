@@ -1,0 +1,5 @@
+interface:
+  display_name: "Passation"
+  short_description: "Close a work session: measure state, log decisions, hand over"
+policy:
+  allow_implicit_invocation: false
